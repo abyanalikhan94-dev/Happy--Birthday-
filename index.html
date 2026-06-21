@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday MAMA ❤️</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+            background: linear-gradient(180deg,
+                    #fbe4ea 0%,
+                    #f7dce4 50%,
+                    #f9e5ea 100%);
+            font-family: 'Cormorant Garamond', serif;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Floating Hearts */
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff5c93;
+            font-size: 24px;
+            animation: floatUp linear infinite;
+            opacity: .7;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(110vh);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: .8;
+            }
+
+            100% {
+                transform: translateY(-120vh);
+                opacity: 0;
+            }
+        }
+
+        /* Sparkles */
+        .sparkle {
+            position: absolute;
+            color: #ffd84d;
+            animation: twinkle 3s infinite;
+            opacity: .8;
+        }
+
+        @keyframes twinkle {
+            50% {
+                transform: scale(1.5);
+                opacity: 1;
+            }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        /* Top Badge */
+        .badge-love {
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, .6);
+            background: rgba(255, 255, 255, .3);
+            backdrop-filter: blur(10px);
+            color: #9d6172;
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+
+        /* Main Card */
+        .hero-card {
+            background: rgba(216, 167, 177, .28);
+            backdrop-filter: blur(15px);
+            border-radius: 40px;
+            padding: 80px 60px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, .08);
+        }
+
+        .hero-title {
+            font-size: 90px;
+            line-height: 1.1;
+            font-weight: 700;
+            color: #925a6a;
+        }
+
+        .quote {
+            margin-top: 40px;
+            font-size: 38px;
+            font-style: italic;
+            color: #6f4b56;
+        }
+
+        /* Message Card */
+        .message-card {
+            margin-top: 60px;
+            background: rgba(255, 255, 255, .35);
+            padding: 80px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+            text-align: left;
+            color: #64434f;
+            font-size: 34px;
+            line-height: 1.8;
+        }
+
+        .message-title {
+            text-align: center;
+            font-size: 50px;
+            margin-bottom: 50px;
+            color: #8e5b6b;
+        }
+
+        /* Secret Button */
+        .secret-btn {
+            margin-top: 60px;
+            border: none;
+            padding: 22px 70px;
+            border-radius: 60px;
+            cursor: pointer;
+            background:
+                linear-gradient(135deg,
+                    #d8a7b1,
+                    #f4d6d8);
+            font-size: 30px;
+            color: white;
+            box-shadow:
+                0 15px 40px rgba(216, 167, 177, .4);
+            transition: .4s;
+        }
+
+        .secret-btn:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .45);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: #fff4f7;
+            max-width: 900px;
+            width: 100%;
+            padding: 50px;
+            border-radius: 30px;
+            max-height: 85vh;
+            overflow: auto;
+            color: #6b4550;
+        }
+
+        .close {
+            float: right;
+            cursor: pointer;
+            font-size: 35px;
+        }
+
+        /* Footer */
+        .footer {
+            margin: 100px 0 50px;
+            font-family: 'Great Vibes', cursive;
+            font-size: 65px;
+            color: #925a6a;
+        }
+
+        /* Mobile */
+        @media(max-width:768px) {
+            .hero-title {
+                font-size: 52px;
+            }
+
+            .quote {
+                font-size: 24px;
+            }
+
+            .message-card {
+                font-size: 22px;
+                padding: 40px;
+            }
+
+            .message-title {
+                font-size: 35px;
+            }
+
+            .footer {
+                font-size: 45px;
+            }
+
+            .secret-btn {
+                font-size: 22px;
+                padding: 16px 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hearts" id="hearts"></div>
+    <div class="container">
+        <div style="font-size:90px;">✨🌸✨</div>
+        <div class="badge-love">
+            🌹 A Special Surprise for MAMA 🌹
+        </div>
+        <div class="hero-card">
+            <h1 class="hero-title">
+                🎂 Happy Birthday<br>
+                My Beautiful MAMA 🎂
+            </h1>
+            <div class="quote">
+                "Today is not just your birthday, it's the celebration of the most beautiful soul who came into my life
+                and made every day brighter."
+            </div>
+        </div>
+        <div class="message-card">
+            <div class="message-title">
+                💗 A Message From the Heart
+            </div>
+            My Dearest MAMA,<br><br>
+            Happy Birthday to the most amazing girl in the world.
+            Every moment with you is special and every memory with you is precious.
+            Your smile lights up my darkest days and your presence makes life beautiful.
+            On your special day, I pray that happiness, success, love, and endless blessings follow you
+            everywhere.<br><br>
+            You deserve all the love in this world and so much more.
+            Thank you for being the beautiful person you are.<br><br>
+            Happy Birthday, My Love ❤️
+        </div>
+        <div style="margin-top:50px;font-size:32px;color:#8a5b69;">
+            There's something special waiting just for you...
+        </div>
+        <button class="secret-btn" onclick="openLetter()">
+            💌 Open My Secret Letter
+        </button>
+        <div class="footer">
+            Made with Endless Love for MAMA ❤️
+        </div>
+    </div>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLetter()">✕</span>
+            <h2 style="text-align:center;margin-bottom:30px;">
+                ❤️ My Secret Letter ❤️
+            </h2>
+            <div id="typewriter"></div>
+        </div>
+    </div>
+    <script>
+        /* Hearts */
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration =
+                (10 + Math.random() * 10) + "s";
+            document.getElementById("hearts")
+                .appendChild(heart);
+            setTimeout(() => {
+                heart.remove();
+            }, 20000);
+        }
+        setInterval(createHeart, 300);
+        /* Modal */
+        const text = `
+My Sweet MAMA,
+There are thousands of beautiful girls in this world, but none compare to you.
+You are cute in ways words can never fully explain.
+Your smile has the power to brighten the darkest day and your eyes carry a warmth that makes me feel at home.
+What I admire most about you is not just your beauty but your character.
+You are hardworking, respectful, kind-hearted, caring, and incredibly strong.
+No matter what challenges come your way, you face them with courage and determination.
+You inspire me with your dedication and your ability to keep moving forward even when things get difficult.
+Never forget how valuable, beautiful, and amazing you are.
+Happy Birthday, my beautiful MAMA.
+Forever proud of you.
+Forever grateful for you.
+Forever cheering for you.
+❤️
+`;
+        function openLetter() {
+            document.getElementById("modal").style.display = "flex";
+            let i = 0;
+            const target =
+                document.getElementById("typewriter");
+            target.innerHTML = "";
+            function type() {
+                if (i < text.length) {
+                    target.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, 25);
+                }
+            }
+            type();
+        }
+        function closeLetter() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
